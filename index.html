@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blissful Existence Healing Acres</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' https://forms.keap.app https://apis.google.com https://connect.facebook.net https://letsmeet.io;
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+      font-src 'self' https://fonts.gstatic.com;
+      img-src 'self' data: https://images.pixieset.com https://blissfulexistencehealingacres.com;
+      frame-src https://www.youtube.com https://letsmeet.io;
+      connect-src 'self' https://forms.keap.app https://letsmeet.io https://api.example.com;
+    ">
+    <script>
+      // Improved error handling
+      window.onerror = function(message, source, lineno, colno, error) {
+        console.error('Global error:', { message, source, lineno, colno, error });
+        // Send error to your error tracking service here
+        return true;
+      };
+      window.addEventListener('error', function(event) {
+        console.error('Captured error:', event.error);
+        // Send error to your error tracking service here
+      });
+      window.addEventListener('unhandledrejection', function(event) {
+        console.error('Unhandled rejection:', event.reason);
+        // Send error to your error tracking service here
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0"></script>
+  </body>
+</html>
